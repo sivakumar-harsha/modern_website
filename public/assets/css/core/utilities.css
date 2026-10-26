@@ -1,0 +1,11 @@
+/* Small shared helpers. Prefer Bootstrap utilities where they exist. */
+.stack > * + * { margin-top: var(--stack-gap, var(--sp-4)); }
+.stack-sm { --stack-gap: var(--sp-2); }
+.stack-lg { --stack-gap: var(--sp-5); }
+.cluster { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-3); }
+.bg-surface { background: var(--c-surface); }
+.bg-soft { background: var(--c-primary-soft); }
+.rounded-app { border-radius: var(--radius); }
+.shadow-app { box-shadow: var(--shadow-sm); }
+.min-w-0 { min-width: 0; }
+.text-balance { text-wrap: balance; }

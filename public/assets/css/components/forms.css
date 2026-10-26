@@ -1,0 +1,33 @@
+/* Forms: compact controls with clear focus and validation states. */
+.form-label { margin-bottom: var(--sp-1); font-size: var(--fs-sm); font-weight: 600; color: var(--c-ink); }
+.form-text { font-size: var(--fs-xs); color: var(--c-muted); }
+
+.form-control, .form-select {
+  min-height: var(--control-h);
+  padding: 0.4rem var(--sp-3);
+  font-size: var(--fs-base);
+  color: var(--c-ink);
+  background-color: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
+}
+.form-control::placeholder { color: var(--c-muted); opacity: 0.8; }
+.form-control:hover, .form-select:hover { border-color: #cbd5e1; }
+.form-control:focus, .form-select:focus {
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 3px rgba(31, 79, 216, 0.18);
+  outline: none;
+}
+.form-control:disabled, .form-select:disabled { background: var(--c-bg); color: var(--c-muted); }
+textarea.form-control { min-height: 6rem; resize: vertical; }
+
+.form-check-input:checked { background-color: var(--c-primary); border-color: var(--c-primary); }
+.form-check-input:focus { border-color: var(--c-primary); box-shadow: 0 0 0 3px rgba(31, 79, 216, 0.18); }
+
+.form-control.is-invalid, .form-select.is-invalid { border-color: var(--c-danger); }
+.invalid-feedback { font-size: var(--fs-xs); color: var(--c-danger); }
+.valid-feedback { font-size: var(--fs-xs); color: var(--c-success); }
+
+/* Honeypot-style fields stay off-screen; give the input tabindex="-1" and autocomplete="off" */
+.field-hidden { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }

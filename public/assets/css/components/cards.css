@@ -1,0 +1,24 @@
+/* Cards: compact surface with restrained hover elevation. */
+.card {
+  --bs-card-spacer-y: var(--sp-4);
+  --bs-card-spacer-x: var(--sp-4);
+  --bs-card-border-color: var(--c-border);
+  --bs-card-border-radius: var(--radius);
+  --bs-card-bg: var(--c-surface);
+  --bs-card-cap-bg: transparent;
+  box-shadow: var(--shadow-sm);
+}
+.card-title { font-size: var(--fs-h4); margin-bottom: var(--sp-2); }
+.card-text { font-size: var(--fs-base); color: var(--c-text); }
+
+.card-hover {
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+.card-hover:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: #cbd5e1; }
+
+.icon-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2.25rem; height: 2.25rem; margin-bottom: var(--sp-3);
+  font-size: 1.1rem; color: var(--c-primary);
+  background: var(--c-primary-soft); border-radius: var(--radius-sm);
+}

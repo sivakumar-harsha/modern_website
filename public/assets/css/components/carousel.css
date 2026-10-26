@@ -1,0 +1,11 @@
+/* Carousel: skin for Bootstrap's carousel. Markup and controls are added in a later stage. */
+.carousel { border-radius: var(--radius); overflow: hidden; }
+.carousel-control-prev, .carousel-control-next { width: 3rem; opacity: 1; }
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  width: 2rem; height: 2rem; background-color: rgba(15, 23, 42, 0.55); border-radius: 50%;
+  background-size: 50%; transition: background-color var(--dur-fast) var(--ease);
+}
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon { background-color: rgba(15, 23, 42, 0.8); }
+.carousel-indicators [data-bs-target] { width: 1.5rem; height: 4px; border: 0; border-radius: 2px; }
+.carousel-caption { text-align: left; }

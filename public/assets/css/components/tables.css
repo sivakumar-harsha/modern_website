@@ -1,0 +1,16 @@
+/* Tables: compact, readable; wrap in .table-responsive for narrow screens. */
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--c-text);
+  --bs-table-border-color: var(--c-border);
+  --bs-table-hover-bg: var(--c-primary-soft);
+  --bs-table-striped-bg: rgba(15, 23, 42, 0.025);
+  margin-bottom: 0;
+  font-size: var(--fs-base);
+}
+.table > :not(caption) > * > * { padding: var(--sp-2) var(--sp-3); }
+.table thead th {
+  font-size: var(--fs-xs); font-weight: 650; letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--c-muted); background: var(--c-bg); white-space: nowrap;
+}
+.table-card { background: var(--c-surface); border: 1px solid var(--c-border); border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; }

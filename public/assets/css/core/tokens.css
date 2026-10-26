@@ -1,0 +1,90 @@
+/* Design tokens: single source of truth for the public site and the future admin. Light theme only. */
+:root {
+  color-scheme: light;
+
+  /* Brand-neutral palette */
+  --c-primary: #1f4fd8;
+  --c-primary-dark: #163a9e;
+  --c-primary-soft: #e8eefc;
+  --c-accent: #0fa3a3;
+  --c-accent-soft: #e0f5f5;
+  --c-ink: #0f172a;
+  --c-text: #334155;
+  --c-muted: #64748b;
+  --c-surface: #ffffff;
+  --c-bg: #f6f8fb;
+  --c-border: #e2e8f0;
+  --c-success: #16a34a;
+  --c-warning: #d97706;
+  --c-danger: #dc2626;
+  --c-info: var(--c-primary);
+  --c-on-primary: #ffffff;
+  --c-focus: #1f4fd8;
+
+  /* Typography (system stack: no font downloads) */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.8125rem;
+  --fs-base: 0.9375rem;
+  --fs-md: 1.0625rem;
+  --fs-h4: 1.0625rem;
+  --fs-h3: 1.1875rem;
+  --fs-h2: clamp(1.25rem, 1.05rem + 0.8vw, 1.625rem);
+  --fs-h1: clamp(1.6rem, 1.2rem + 1.4vw, 2.25rem);
+  --lh-base: 1.55;
+  --lh-tight: 1.25;
+
+  /* Spacing scale */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --section-y: clamp(2rem, 4vw, 3.5rem);
+  --gutter: clamp(1rem, 3vw, 1.5rem);
+
+  /* Shape and elevation */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 6px 18px rgba(15, 23, 42, 0.1);
+
+  /* Layout */
+  --container-max: 1200px;
+  --navbar-h: 56px;
+  --control-h: 2.25rem;
+
+  /* Motion */
+  --dur-fast: 150ms;
+  --dur: 220ms;
+  --ease: cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+@media (min-width: 1920px) {
+  :root { --container-max: 1320px; }
+}
+
+/* Map tokens onto Bootstrap's CSS variables (vendor files are never edited) */
+:root {
+  --bs-body-font-family: var(--font-sans);
+  --bs-body-font-size: var(--fs-base);
+  --bs-body-line-height: var(--lh-base);
+  --bs-body-color: var(--c-text);
+  --bs-body-bg: var(--c-bg);
+  --bs-heading-color: var(--c-ink);
+  --bs-primary: var(--c-primary);
+  --bs-primary-rgb: 31, 79, 216;
+  --bs-link-color: var(--c-primary);
+  --bs-link-color-rgb: 31, 79, 216;
+  --bs-link-hover-color: var(--c-primary-dark);
+  --bs-link-hover-color-rgb: 22, 58, 158;
+  --bs-border-color: var(--c-border);
+  --bs-border-radius: var(--radius-sm);
+  --bs-border-radius-lg: var(--radius);
+  --bs-secondary-color: var(--c-muted);
+  --bs-focus-ring-color: rgba(31, 79, 216, 0.3);
+}

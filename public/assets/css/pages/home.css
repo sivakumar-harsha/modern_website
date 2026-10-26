@@ -1,0 +1,50 @@
+/* Homepage-only styles. Uses the shared tokens; nothing here redefines the design system. */
+#services, #benefits, #feature, #process, #contact { scroll-margin-top: calc(var(--navbar-h) + var(--sp-3)); }
+
+/* Hero */
+.hero-home { padding-block: clamp(1.75rem, 5vw, 3.5rem); }
+.hero-home h1 { max-width: 22ch; }
+.hero-art svg { display: block; width: 100%; height: auto; max-width: 520px; margin-inline: auto; filter: drop-shadow(0 12px 24px rgba(15, 23, 42, 0.12)); }
+
+/* Benefits */
+.benefit { display: flex; gap: var(--sp-3); align-items: flex-start; }
+.benefit-icon {
+  flex: none; display: inline-flex; align-items: center; justify-content: center;
+  width: 2.25rem; height: 2.25rem; font-size: 1.1rem;
+  color: var(--c-accent); background: var(--c-accent-soft); border-radius: var(--radius-sm);
+}
+
+/* Visual feature: pure CSS composition */
+.feature-art {
+  position: relative; min-height: 260px; overflow: hidden;
+  border-radius: var(--radius); border: 1px solid var(--c-border);
+  background: linear-gradient(135deg, var(--c-primary-soft), var(--c-accent-soft));
+}
+.orb { position: absolute; border-radius: 50%; filter: blur(2px); }
+.orb-1 { width: 150px; height: 150px; right: -30px; top: -30px; background: radial-gradient(circle at 30% 30%, #fff, rgba(31, 79, 216, 0.35)); }
+.orb-2 { width: 110px; height: 110px; left: -20px; bottom: -20px; background: radial-gradient(circle at 30% 30%, #fff, rgba(15, 163, 163, 0.4)); }
+.feature-card {
+  position: absolute; display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: var(--sp-3); row-gap: 6px; align-items: center;
+  width: min(62%, 240px); padding: var(--sp-3);
+  background: var(--c-surface); border: 1px solid var(--c-border); border-radius: var(--radius); box-shadow: var(--shadow-md);
+}
+.feature-card .bi { grid-row: span 2; font-size: 1.1rem; color: var(--c-primary); background: var(--c-primary-soft); width: 2rem; height: 2rem; display: grid; place-items: center; border-radius: var(--radius-sm); }
+.feature-card span { display: block; height: 7px; border-radius: 4px; background: var(--c-border); }
+.feature-card span + span { width: 60%; background: #eef2f7; }
+.feature-card-a { left: 6%; top: 10%; }
+.feature-card-b { right: 6%; top: 38%; }
+.feature-card-c { left: 14%; bottom: 8%; }
+.feature-card-b .bi { color: var(--c-accent); background: var(--c-accent-soft); }
+
+.check-list { list-style: none; padding: 0; margin: 0; }
+.check-list li { position: relative; padding-left: 1.6rem; margin-bottom: var(--sp-2); }
+.check-list li::before { content: "\F26A"; font-family: "bootstrap-icons"; position: absolute; left: 0; top: 0; color: var(--c-accent); }
+
+/* Process */
+.process-step { height: 100%; padding: var(--sp-4); background: var(--c-surface); border: 1px solid var(--c-border); border-radius: var(--radius); }
+.process-num {
+  display: inline-grid; place-items: center; width: 1.75rem; height: 1.75rem; margin-bottom: var(--sp-2);
+  font-size: var(--fs-sm); font-weight: 700; color: var(--c-on-primary); background: var(--c-primary); border-radius: var(--radius-pill);
+}
+
+@media (max-width: 575.98px) { .hero-home .cluster .btn { flex: 1 1 100%; } }

@@ -1,0 +1,29 @@
+/* Typography: compact, readable scale driven by tokens. */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 var(--sp-3);
+  color: var(--c-ink);
+  font-weight: 650;
+  line-height: var(--lh-tight);
+  letter-spacing: -0.01em;
+}
+h1, .h1 { font-size: var(--fs-h1); }
+h2, .h2 { font-size: var(--fs-h2); }
+h3, .h3 { font-size: var(--fs-h3); }
+h4, .h4 { font-size: var(--fs-h4); }
+h5, .h5, h6, .h6 { font-size: var(--fs-base); }
+
+p { margin: 0 0 var(--sp-4); }
+.lead { font-size: var(--fs-md); color: var(--c-text); }
+small, .small { font-size: var(--fs-sm); }
+.text-muted { color: var(--c-muted) !important; }
+.eyebrow {
+  display: inline-block;
+  margin-bottom: var(--sp-2);
+  font-size: var(--fs-xs);
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-primary);
+}
+code, kbd, pre { font-family: var(--font-mono); font-size: 0.875em; }
+.measure { max-width: 65ch; }
